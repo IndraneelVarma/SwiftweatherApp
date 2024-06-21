@@ -1,7 +1,7 @@
 import SwiftUI
 import CoreLocation
 
-struct ContentView: View {
+struct WeatherAppView: View {
     @State public var isNight = false
     @StateObject private var locationManager = LocationManager()
     @State private var weatherData: WeatherData?
@@ -78,29 +78,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
-}
-
-struct WeatherDayView: View {
-    var day: String
-    var image: String
-    var temp: Int
-    
-    var body: some View {
-        VStack {
-            Text(day)
-                .font(.system(size: 17, weight: .medium))
-                .foregroundStyle(.white)
-            Image(systemName: image)
-                .resizable()
-                .renderingMode(.original)
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 40, height: 40)
-            Text("\(temp)°")
-                .font(.system(size: 20, weight: .medium))
-                .foregroundStyle(.white)
-        }
-    }
+    WeatherAppView()
 }
 
 struct BackgroundView: View {
@@ -111,24 +89,5 @@ struct BackgroundView: View {
                        startPoint: .topLeading,
                        endPoint: .bottomTrailing)
             .ignoresSafeArea(.all)
-    }
-}
-
-struct MainWeatherView: View {
-    var image: String
-    var temp: Int
-    
-    var body: some View {
-        VStack(spacing: 8) {
-            Image(systemName: image)
-                .renderingMode(.original)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 180, height: 180)
-            Text("\(temp)°")
-                .font(.system(size: 70, weight: .medium))
-                .foregroundStyle(.white)
-        }
-        .padding(.bottom, 40)
     }
 }
