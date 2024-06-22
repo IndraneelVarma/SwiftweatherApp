@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct WeatherButton: View {
+struct ThemeButton: View {
     var title: String
     var textColor: Color
     var backgroundColor: Color

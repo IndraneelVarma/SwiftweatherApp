@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct MainWeatherView: View {
+struct MainWeatherModel: View {
     var image: String
     var temp: Int
     
