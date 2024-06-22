@@ -27,7 +27,7 @@ struct ContentView: View {
                         SecondaryWeatherModel(day: String(week[(index+2)%7].prefix(3)), image: "sun.max.fill", temp: 33)
                         SecondaryWeatherModel(day: String(week[(index+3)%7].prefix(3)), image: "wind.snow", temp: 21)
                         SecondaryWeatherModel(day: String(week[(index+4)%7].prefix(3)), image: "sunset.fill", temp: 25)
-                        SecondaryWeatherModel(day: String(week[(index+5)%7].prefix(3)), image: "snow", temp: 15)
+                        SecondaryWeatherModel(day: String(week[(index+5)%7].prefix(3)), image: "cloud.snow.fill", temp: 15)
                     }
                     
                     Spacer()
